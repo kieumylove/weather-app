@@ -2,21 +2,85 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Weather App</title>
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <link rel="stylesheet" href="src/style.css" />
     <link
-      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css"
       rel="stylesheet"
-      integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+      integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
       crossorigin="anonymous"
     />
+    <script src="https://cdn.jsdelivr.net/npm/axios@1.1.2/dist/axios.min.js"></script>
+
+    <title>Weather App</title>
   </head>
   <body>
-    <div class="container"></div>
-    <h1>Hello World</h1>
-    <a href="" class="btn btn-primary"> Click me </a>
-    <script src="src/app.js"></script>
+    <div class="container">
+      <div class="weather-app-wrapper">
+        <div class="weather-app">
+          <div class="oerview">
+            <form class="search-form" id="searchForm">
+              <div class="row">
+                <div class="col-9">
+                  <input
+                    type="search"
+                    placeholder="Type a city.."
+                    autofocus="on"
+                    autocomplete="off"
+                    class="form-control shadow-sm"
+                  />
+                </div>
+                <div class="col-3">
+                  <input
+                    type="submit"
+                    value="Search"
+                    class="form-control btn btn-primary shadow-sm"
+                    id="searchs"
+                  />
+                </div>
+              </div>
+            </form>
+            <h1 id="city"></h1>
+            <ul>
+              <li>Friday 5:00</li>
+              <li id="description"></li>
+              <li>Partly Cloudy</li>
+            </ul>
+            <div class="row">
+              <div class="col-6">
+                <div class="d-flex weather-temperature">
+                  <img
+                    src="https://ssl.gstatic.com/onebox/weather/64/partly_cloudy.png"
+                    alt="Cloudy icon"
+                    id="icon"
+                  />
+                  <div class="float-left">
+                    <span id="temperature">19</span>
+                    <span class="units">
+                      <a href="#" id="farenheit">°C </a> |
+                      <a href="#" id="farenheit">°F </a>
+                    </span>
+                  </div>
+                </div>
+              </div>
+              <div class="col-6">
+                <ul>
+                  <li>Humidity: <span id="humidity"></span>%</li>
+                  <li>Wind: <span id="wind"></span>km/h</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <small>
+        <a href="https://github.com/kieumylove/weather-app" target="_blank"
+          >Open-source code</a
+        >
+        by Kieu-My Le
+      </small>
+    </div>
+    <script src="src/index.js"></script>
   </body>
 </html>
