@@ -40,16 +40,15 @@
                     id="searchs"
                   />
                 </div>
-
-          <div class="overview">
-            
               </div>
             </form>
+            <div class="overview">
             <h1 id="city"></h1>
             <ul>
               <li> Last updated at: <span id="date"></li>
               <li id="description"></li>
             </ul>
+            </div>
             <div class="row">
               <div class="col-6">
                 <div class="d-flex weather-temperature">
@@ -62,8 +61,8 @@
                   <div class="float-left">
                     <strong id="temperature"></strong>
                     <span class="units">
-                      <a href="#" id="farenheit">°C </a> |
-                      <a href="#" id="farenheit">°F </a>
+                      <a href="#" id="celsius-link" class="active">°C</a> |
+                    <a href="#" id="fahrenheit-link">°F</a>
                     </span>
                   </div>
                 </div>
@@ -76,14 +75,13 @@
               </div>
             </div>
           </div>
-        </div>
-      </div>
-      <small>
+        <small>
         <a href="https://github.com/kieumylove/weather-app" target="_blank"
           >Open-source code</a
         >
         by Kieu-My Le
       </small>
+      </div>
     </div>
     <script src="src/app.js"></script>
   </body>
