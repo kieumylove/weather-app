@@ -11,16 +11,16 @@
       integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ"
       crossorigin="anonymous"
     />
-     <link rel="stylesheet" href="src/style.css" />
+     
     <script src="https://cdn.jsdelivr.net/npm/axios@1.1.2/dist/axios.min.js"></script>
+    <link rel="stylesheet" href="src/style.css" />
     <title>Weather App</title>
   </head>
   <body>
     <div class="container">
       <div class="weather-app-wrapper">
         <div class="weather-app">
-          <div class="overview">
-            <form class="search-form" id="searchForm">
+<form class="searchform" id="search-form">
               <div class="row">
                 <div class="col-9">
                   <input
@@ -29,6 +29,7 @@
                     autofocus="on"
                     autocomplete="off"
                     class="form-control shadow-sm"
+                    id="city-input"
                   />
                 </div>
                 <div class="col-3">
@@ -39,6 +40,9 @@
                     id="searchs"
                   />
                 </div>
+
+          <div class="overview">
+            
               </div>
             </form>
             <h1 id="city"></h1>
